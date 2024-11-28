@@ -69,6 +69,10 @@ uvicorn app.main:app --reload
     1. Multiple queries are executed to get the required data.
     2. The data is then formatted in text format.
     3. The text is sent over to OpenAI to generate a report.
+4. Deployment on AWS EC2 
+    1. Ubuntu based t2.micro EC2 instance initialized.
+    2. Ngnix reverse proxy set up with public IP.
+    3. Changed the inbound rules to allow HTTP requests.
 
 
 ## Scaling for enterprise
@@ -82,6 +86,7 @@ uvicorn app.main:app --reload
 7. Monitoring using Langfuse or Langsmith. 
 8. An API that can dynamically generate queries and provide response based on the user input
 9. Versioning, CI/CD pipeline, Rollbacks, etc.
+10. Serverless implementation.
 
 
 ## Sample Curl Commands
