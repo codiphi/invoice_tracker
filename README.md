@@ -82,3 +82,17 @@ uvicorn app.main:app --reload
 7. Monitoring using Langfuse or Langsmith. 
 8. An API that can dynamically generate queries and provide response based on the user input
 9. Versioning, CI/CD pipeline, Rollbacks, etc.
+
+
+## Sample Curl Commands
+
+1. Upload a receipt:
+```bash
+curl -X POST -F "file=@test_data/geeksquad_fake_invoice.jpg" http://localhost:8000/upload-receipt/
+```
+
+2. Get monthly summary:
+```bash
+curl -X POST http://localhost:8000/monthly-summary/ -H "Content-Type: application/json" -d '{"month": 9, "year": 2022}'
+```
+
